@@ -1,0 +1,23 @@
+.overlay {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 12;
+  top: 0;
+  left: 0;
+  background-color: #3E5A80;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 0%;
+  width: 100%;
+}
+.active{
+  width: 100%;
+}
+.inactive{
+  width: 0;
+}

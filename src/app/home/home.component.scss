@@ -1,0 +1,55 @@
+.main-container
+{
+  width: 100%;
+  height: 100%;
+  background-color: #3E5A80;
+}
+
+.input-search-wrapper
+{
+  position: absolute;
+  right: 35%;
+  top: 15%;
+}
+.input-search-text{
+  background: #374355;
+  border: none;
+  padding: none;
+  opacity: 0.7;
+  color: white;
+  padding-left: 10px;
+  box-sizing: border-box;
+  height: 25px;
+}
+::-webkit-input-placeholder{
+  color: #c3ccd3;
+}
+.ship-list{
+  background-color: #3E5A80;
+}
+.ship-list:hover {
+cursor: pointer;
+}
+.overlay {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 12;
+  top: 0;
+  left: 0;
+  background-color: #3E5A80;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 0%;
+  width: 100%;
+}
+.active{
+  width: 100%;
+}
+.inactive{
+  width: 0;
+}

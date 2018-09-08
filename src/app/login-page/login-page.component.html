@@ -1,0 +1,33 @@
+<div class="main-container">
+
+  <!--Rate page-->
+  <div class="overlay" [class.active]="showLandingPage" [class.inactive]="!showLandingPage">
+    <div class="overlay-content">
+      <app-landing-page (landingPageButtonPressed)="hideLandingPage()"></app-landing-page>
+    </div>
+  </div>
+
+  <div>
+    <div class="svg-wrapper">
+      <svg width="100%" height="100%" viewBox="0 0 266 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+        <text x="65.033px" y="30.21px" style="font-family:'LucidaGrande', 'Lucida Grande', sans-serif;font-weight:500;font-size:20px;fill:#fff;">Personal information</text>
+        <path id="user-circle-o" d="M22.5,0c12.43,0 22.5,10.07 22.5,22.5c0,12.356 -10.019,22.5 -22.5,22.5c-12.455,0 -22.5,-10.12 -22.5,-22.5c0,-12.43 10.07,-22.5 22.5,-22.5Zm15.544,33.925c2.335,-3.214 3.742,-7.156 3.742,-11.425c0,-10.622 -8.664,-19.286 -19.286,-19.286c-10.622,0 -19.286,8.664 -19.286,19.286c0,4.269 1.407,8.211 3.742,11.425c0.903,-4.495 3.089,-8.211 7.683,-8.211c2.035,1.984 4.796,3.215 7.861,3.215c3.065,0 5.826,-1.231 7.861,-3.215c4.594,0 6.78,3.716 7.683,8.211l0,0Zm-5.901,-16.246c0,-5.325 -4.32,-9.643 -9.643,-9.643c-5.323,0 -9.643,4.32 -9.643,9.643c0,5.322 4.32,9.642 9.643,9.642c5.323,0 9.643,-4.32 9.643,-9.642Z"
+          style="fill:#fff;fill-rule:nonzero;" />
+      </svg>
+  </div>
+
+
+    <input [(ngModel)]="profile.name" placeholder="Name">
+    <input [(ngModel)]="profile.sailorID" placeholder="Sailor ID">
+    <input [(ngModel)]="profile.phone" placeholder="Phone">
+    <input [(ngModel)]="profile.arrivalDate" placeholder="Estimated arrival (date)">
+    <input [(ngModel)]="profile.emergencyContact" placeholder="Emergency contact">
+  </div>
+
+  <div>
+    <button class="sign-in-button" (click)="readyButtonPressed()">
+      Ready
+    </button>
+  </div>
+</div>

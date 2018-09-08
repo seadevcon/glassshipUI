@@ -1,0 +1,30 @@
+.star {
+  fill:#3d4d65;
+}
+
+.active {
+  fill:#ff9947;
+}
+.overlay {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 12;
+  top: 0;
+  left: 0;
+  background-color: #3E5A80;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 0%;
+  width: 100%;
+}
+.active-overlay{
+  width: 100%;
+}
+.inactive-overlay{
+  width: 0;
+}
