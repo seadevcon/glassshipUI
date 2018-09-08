@@ -27,7 +27,7 @@ export class LoginPageComponent implements OnInit {
   }
   readyButtonPressed(){
     this.profileService.postProfile(this.profile);
-    this.registerPressed.emit();
+    this.registerPressed.emit(this.profile);
   }
 
 }

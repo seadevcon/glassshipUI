@@ -14,13 +14,11 @@ export class RatingService {
     })
   };
 
-  rateUrl = 'http://127.0.0.1:5000/rate';
+  rateUrl = 'http://humarightsatsea.fatdataunicorn.com/rate';
   constructor(private http: HttpClient) { }
 
   postRating(rating: Rating){
-    const jsonString = JSON.stringify(rating);
-    let body = new FormData();
-    return this.http.post<Rating>(this.rateUrl, jsonString, this.httpOptions)
+    return this.http.post<Rating>(this.rateUrl, rating, this.httpOptions)
     .subscribe(
       res => {
         console.log(res);

@@ -3,6 +3,7 @@ import { Ship } from '../models/ship';
 import { shimContentAttribute } from '@angular/platform-browser/src/dom/dom_renderer';
 import { ShipService } from '../services/ship.service';
 import { templateJitUrl } from '@angular/compiler';
+import { Profile } from '../models/profile';
 
 @Component({
   selector: 'app-home',
@@ -13,6 +14,7 @@ export class HomeComponent implements OnInit {
 
   constructor(private shipService: ShipService) { }
   allShips: Ship[];
+  profile: Profile;
   ships;
   selectedShip: Ship;
   signedIn = false;
@@ -52,7 +54,8 @@ export class HomeComponent implements OnInit {
       this.selectedShip = ship;
       this.hasSelectedShip = true;
     }
-  hasSignedIn() {
+  hasSignedIn(profile: Profile) {
+    this.profile = profile;
     this.signedIn = true;
   }
 }

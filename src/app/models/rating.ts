@@ -1,7 +1,7 @@
 export class Rating {
 'name' = 'test';
+'device_id' = '-1';
 'ship_name' = 'test2';
-'device_id' = 'test';
 'food' = 0;
 'water' = 0;
 'bedding' = 0;

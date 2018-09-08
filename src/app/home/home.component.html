@@ -3,14 +3,14 @@
   <!-- Login page-->
   <div *ngIf="selectedShip == undefined" class="overlay" [class.active]="!signedIn" [class.inactive]="signedIn">
     <div class="overlay-content">
-      <app-login-page (registerPressed)="hasSignedIn()"></app-login-page>
+      <app-login-page (registerPressed)="hasSignedIn($event)"></app-login-page>
     </div>
   </div>
 
   <!--Status page-->
   <div *ngIf="selectedShip != undefined"  class="overlay" [class.active]="hasSelectedShip" [class.inactive]="!hasSelectedShip">
     <div class="overlay-content">
-      <app-status-page [selectedShip]="selectedShip" (backToHomeEmitter)="backToHome()"></app-status-page>
+      <app-status-page [selectedShip]="selectedShip" [profile]="profile" (backToHomeEmitter)="backToHome()"></app-status-page>
     </div>
   </div>
 

@@ -7,7 +7,7 @@ import { Ship } from '../models/ship';
   providedIn: 'root'
 })
 export class ShipService {
-  shipUrl = 'http://127.0.0.1:5000/get_ships_names';
+  shipUrl = 'http://humarightsatsea.fatdataunicorn.com/get_ships_names';
   constructor(private http: HttpClient) { }
 
   getShips(): Observable<any> {

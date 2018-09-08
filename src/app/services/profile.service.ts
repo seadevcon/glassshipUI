@@ -13,7 +13,7 @@ export class ProfileService {
       'Content-Type':  'application/json',
     })
   };
-  shipUrl = '/register_user';
+  shipUrl = 'http://humarightsatsea.fatdataunicorn.com/register';
   constructor(private http: HttpClient) { }
 
   postProfile(profile: Profile){

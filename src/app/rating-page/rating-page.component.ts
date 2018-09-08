@@ -24,6 +24,8 @@ export class RatingPageComponent implements OnInit {
     this.list = [];
     this.list.push(1, 2, 3, 4, 5);
     this.rating = new Rating();
+    this.rating.name = this.profile.name;
+    this.rating.ship_name = this.selectedShip.name;
   }
 
   onBackButtonClicked() {

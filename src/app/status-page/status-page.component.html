@@ -17,13 +17,13 @@
 <!--Rate page-->
 <div class="overlay" [class.active]="showRaitingView" [class.inactive]="!showRaitingView">
   <div class="overlay-content">
-    <app-rating-page (backButtonPressed)="setShowRateView(false)" (backToHomeButtonPressed)="goBackToHomePage()"></app-rating-page>
+    <app-rating-page [selectedShip]="selectedShip" [profile]="profile"  (backButtonPressed)="setShowRateView(false)" (backToHomeButtonPressed)="goBackToHomePage()"></app-rating-page>
   </div>
 </div>
 <!--Distress page-->
 <div *ngIf="showDistressView" class="overlay" [class.active]="showDistressView" [class.inactive]="!showDistressView">
   <div class="overlay-content">
-    <app-distress-page (backButtonPressed)="setShowDistressView(false)"></app-distress-page>
+    <app-distress-page [selectedShip]="selectedShip" [profile]="profile" (backButtonPressed)="setShowDistressView(false)"></app-distress-page>
   </div>
 </div>
 

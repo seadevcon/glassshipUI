@@ -12,11 +12,11 @@ export class DistressService {
       'Content-Type':  'application/json',
     })
   };
-  shipUrl = '/register_user';
+  shipUrl = 'http://humarightsatsea.fatdataunicorn.com/add_distress';
   constructor(private http: HttpClient) { }
 
   postDistress(distress: Distress){
-    return this.http.post<Profile>(this.shipUrl, distress, this.httpOptions)
+    return this.http.post<Distress>(this.shipUrl, distress, this.httpOptions)
     .subscribe(
       res => {
         console.log(res);
